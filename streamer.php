@@ -45,6 +45,10 @@
 	// set max chunks
 	$max = findchunks($url);
 
+	// log downloads
+	shell_exec("mkdir logs");
+	shell_exec("echo '$url, $folder, $file' >> logs/downloads.csv");
+
 	// mkdir & empty file
 	shell_exec("mkdir -p '$folder'");
 	shell_exec("echo '' > '$folder/$file'");
