@@ -47,7 +47,7 @@
 
 	// mkdir & empty file
 	shell_exec("mkdir '$folder'");
-	shell_exec("echo '' > $folder/$file");
+	shell_exec("echo '' > '$folder/$file'");
 
 	// stream all chunks
 	for ($i = 1; $i < $max; $i++) {
