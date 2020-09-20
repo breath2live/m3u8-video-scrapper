@@ -46,7 +46,7 @@
 	$max = findchunks($url);
 
 	// mkdir & empty file
-	shell_exec("mkdir '$folder'");
+	shell_exec("mkdir -p '$folder'");
 	shell_exec("echo '' > '$folder/$file'");
 
 	// stream all chunks
