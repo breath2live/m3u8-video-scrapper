@@ -16,8 +16,8 @@
 		shell_exec("curl " . $link . " >> '$folder/$file'");
 	}
 
-	// find chucks in config file
-	function findchucks($link) {
+	// find chunks in config file
+	function findchunks($link) {
 		// download config file
 		$config = shell_exec("curl " . $link);
 
@@ -30,28 +30,26 @@
 		// backwards through array
 		for ($i = $lenght; $i >= 0; $i--) {
 			if (strpos($file[$i], 'seg-') !== false) {
-				$chucks = explode('-', $file[$i]);
-				foreach ($chucks as $value) {
+				$chunks = explode('-', $file[$i]);
+				foreach ($chunks as $value) {
 					if (is_numeric($value)) {
-						$ret = $value;
-						$i = -1;
-						break;
+						return $value;
 					}
 				}
 			}
 		}
 
-		return $ret;
+		exit('Error');
 	}
 
-	// set max chuncks
-	$max = findchucks($url);
+	// set max chunks
+	$max = findchunks($url);
 
 	// mkdir & empty file
 	shell_exec("mkdir '$folder'");
 	shell_exec("echo '' > $folder/$file");
 
-	// stream all chuncks
+	// stream all chunks
 	for ($i = 1; $i < $max; $i++) {
 		$link = $url . $pad[0] . $i . $pad[1];
 		stream($link, $folder, $file);
