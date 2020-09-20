@@ -23,7 +23,7 @@
 			<p>Video URL:</p>
 			<input type="text" id="url" class="form-control" placeholder="Please enter URL of m3u8 file"><br>
 			<p>Folder:</p>
-			<input type="text" id="folder" class="form-control" placeholder="Please enter Folder to save File. Default: downloads"><br>
+			<input type="text" id="folder" class="form-control" placeholder="Please enter Folder or absolut path to save File. Default: downloads"><br>
 			<p>Filename:</p>
 			<input type="text" id="file" class="form-control" placeholder="Please enter Filename. Existing File will be deleted. Default: video-xyzxyz.ts"><br>
 
