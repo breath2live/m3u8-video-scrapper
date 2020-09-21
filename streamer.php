@@ -54,7 +54,7 @@
 	shell_exec("echo '' > '$folder/$file'");
 
 	// stream all chunks
-	for ($i = 1; $i < $max; $i++) {
+	for ($i = 1; $i <= $max; $i++) {
 		$link = $url . $pad[0] . $i . $pad[1];
 		stream($link, $folder, $file);
 

@@ -37,6 +37,7 @@ async function stream(url, folder, file) {
 				progress.style.width = "100%";
 				break;
 			} else if(value == "Done") {
+				startTime = new Date().getTime();
 				progress.innerText = "File fully received";
 				progress.style.width = "100%";
 				break;
