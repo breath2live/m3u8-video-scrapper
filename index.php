@@ -32,7 +32,11 @@
 				<div class="progress-bar" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 			</div><br><br>
 
-			<div class="container" id="stat"></div>
+			<p>Statistics:</p>
+			<div class="container" id="stat"></div><br><br>
+
+			<p>Download List:</p>
+			<div class="container" id="logs"></div>
 
 
 		</div>

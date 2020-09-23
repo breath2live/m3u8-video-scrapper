@@ -4,6 +4,7 @@ var file = document.getElementById('file');
 var btn = document.getElementById('btn');
 var progress = document.getElementById('progress');
 var stat = document.getElementById('stat');
+var logs = document.getElementById('logs');
 
 
 
@@ -15,6 +16,7 @@ btn.addEventListener('click', () => {
 	}
 	if (folder.value == "") folder.value = "downloads";
 	if (file.value == "") file.value = "video-" + Math.floor(Math.random()*1000000) + ".ts";
+	logs.innerText = logs.innerText + url.value + "\n" + folder.value + "\n" + file.value + "\n\n";
 	stream(url.value, folder.value, file.value);
 });
 
