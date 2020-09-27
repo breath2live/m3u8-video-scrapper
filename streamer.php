@@ -53,6 +53,9 @@
 	shell_exec("mkdir -p '$folder'");
 	shell_exec("echo '' > '$folder/$file'");
 
+	// start
+	echo "Start";
+
 	// stream all chunks
 	for ($i = 1; $i <= $max; $i++) {
 		$link = $url . $pad[0] . $i . $pad[1];

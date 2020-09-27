@@ -26,6 +26,8 @@
 			<input type="text" id="folder" class="form-control" placeholder="Please enter Folder or absolut path to save File. Default: downloads"><br>
 			<p>Filename:</p>
 			<input type="text" id="file" class="form-control" placeholder="Please enter Filename. Existing File will be deleted. Default: video-xyzxyz.ts"><br>
+			<p>Last Added File:</p>
+			<div class="container" id="lastFile"></div><br><br>
 
 			<input type="button" id="btn" class="btn btn-primary form-control" value="Steam and Download"><br><br>
 			<div class="progress">
